@@ -1,0 +1,198 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+h1, h2, h3{
+    font-weight: bolder;
+    text-align: center;
+}
+
+h1, h3{
+    margin-bottom: 12px;
+}
+
+h2{
+    margin-top: 12px;
+}
+
+
+header p{
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header nav {
+    margin: 32px;
+}
+header nav button{
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    padding: 12px;
+    width: 200px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.2s ease;
+}
+header nav button:hover{
+    background-color: black;
+    color: white;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section{
+    border: 1px solid black;
+    width: 80%;
+}
+
+main section .judul_section{
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F4F4F4;
+}
+
+main section .judul_section div{
+    margin-left: 24px;
+}
+
+main section .judul_section div button{
+    background-color: transparent;
+    color: black;
+    font-size: 14px;
+    padding: 8px;
+    width: 120px;
+    cursor: pointer;
+    border: 1px solid black;
+    font-weight: 600;
+}
+
+main section .judul_section div button.active{
+    background: black;
+    color: white;
+}
+
+main section .judul_section div button:hover{
+    background-color: black;
+    color: white;
+}
+.card_perhitungan{
+    padding: 24px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+img{
+    max-width: 400px;
+    padding: 12px;
+}
+
+.card_perhitungan .card_form{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    height: 100%;
+    padding: 12px;
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.form input{
+    padding: 4px;
+    padding-left: 12px;
+    font-size: 18px;
+}
+
+.form button{
+    margin-top: 12px;
+    padding: 8px;
+    background-color: black;
+    color: white;
+}
+.form .reset{
+    margin-top: 0px;
+    background-color: gray;
+    border: none;
+}
+.none{
+    display: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.card_hasil_hitung{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: black; */
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+      }
+    h1{
+        margin-top: 24px;
+        font-size: 26px;
+    }
+    header nav button{
+        font-size: 16px;
+        padding: 8px;
+        width: 130px;
+    }
+    .card_perhitungan{
+        padding: 12px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+    main section{
+        border: 1px solid black;
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    img{
+        max-width: 300px;
+        padding: 12px;
+    }
+    .card_perhitungan .card_form{
+        border-left: none;
+        border-right: none;
+        height: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+    
+    .none{
+        display: none;
+    }
+  }

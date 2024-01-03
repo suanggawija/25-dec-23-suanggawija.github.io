@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Kalkulator Matik</title>
+
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Katik</h1>
+        <p>Lorem ipsum dolor sit amet consectetur. Convallis feugiat amet praesent tempor metus.</p>
+        <!-- <nav>
+            <button>Segitiga</button>
+            <button>Jajargenjang</button>
+        </nav> -->
+    </header>
+    <main>
+        <section>
+            <div class="judul_section">
+                <h2>Segitiga</h2>
+                <div>
+                    <button id="button_luas_segitiga" class="active" onclick="hiddendisplay('luas')">Luas</button>
+                    <button id="button_keliling_segitiga" class="" onclick="hiddendisplay('keliling')">Keliling</button>
+                </div>
+            </div>
+            <div class="card_perhitungan" id="luas_segitiga">
+                <div>
+                    <img src="/assets/luassegitiga.jpg" alt="segitiga">
+                </div>
+                <div class="card_form">
+                    <h3>Masukkan Nilai</h3>
+                    <div class="form">
+                        <input type="number" id="alas_segitiga" placeholder="Masukkan Alas" required>
+                        <input type="number" id="tinggi_segitiga" placeholder="Masukkan Tinggi" required>
+                        <button onclick=hitung_luas_segitiga()>Hitung</button>
+                        <button class="reset" onclick=reset_hasil_segitiga()>Reset</button>
+                    </div>
+                </div>
+                <div class="card_hasil_hitung">
+                    <h3>Hasil Hitung</h3>
+                    <div>
+                        <div>Luas = 1/2 x Alas x Tinggi</div>
+                        <div>Luas = <span id="perhitungan_luas_segitiga"></span></div>
+                        <div>Luas = <span id="hasil_luas_segitiga"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card_perhitungan none" id="keliling_segitiga" >
+                <div>
+                    <img src="/assets/kelilingsegitiga.jpg" alt="segitiga">
+                </div>
+                <div class="card_form">
+                    <h3>Masukkan Nilai</h3>
+                    <div class="form">
+                        <input type="number" id="sisi_1" placeholder="Sisi 1" required>
+                        <input type="number" id="sisi_2" placeholder="Sisi 2" required>
+                        <input type="number" id="sisi_3" placeholder="Sisi 3" required>
+                        <button onclick=hitung_keliling_segitiga()>Hitung</button>
+                        <button class="reset" onclick=reset_hasil_segitiga()>Reset</button>
+                    </div>
+                </div>
+                <div class="card_hasil_hitung">
+                    <h3>Hasil Hitung</h3>
+                    <div>
+                        <div>Keliling = Sisi x Sisi x Sisi</div>
+                        <div>Keliling = <span id="perhitungan_keliling_segitiga"></span></div>
+                        <div>Keliling = <span id="hasil_keliling_segitiga"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+</html>
