@@ -65,7 +65,7 @@ function hitung_luas_segitiga(){
     let nilai_sisi_3 = parseFloat(sisi_3.value);
 
     let hasil = nilai_sisi_1 + nilai_sisi_2 + nilai_sisi_3;
-    let perhitungan = nilai_sisi_1+" m + "+ nilai_sisi_2 +" m + "+ nilai_sisi_3 +" m + ";
+    let perhitungan = nilai_sisi_1+" m + "+ nilai_sisi_2 +" m + "+ nilai_sisi_3 +" m";
 
     document.getElementById('perhitungan_keliling_segitiga').textContent = perhitungan;
     document.getElementById('hasil_keliling_segitiga').textContent = hasil + " m";
