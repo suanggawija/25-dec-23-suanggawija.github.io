@@ -13,18 +13,20 @@
     <header>
         <h1>Welcome to Katik</h1>
         <p>Hai sobat, Selamat datang di Katik :) <br> Sebuah web app sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
-        <!-- <nav>
-            <button>Segitiga</button>
-            <button>Jajargenjang</button>
-        </nav> -->
+        <nav>
+            <button id="nav_button_segitiga" class="active" onclick="menampilkan_bangun_datar('segitiga')">Segitiga</button>
+            <button id="nav_button_jajargenjang" class="" onclick="menampilkan_bangun_datar('jajargenjang')">Jajargenjang</button>
+            <button id="nav_button_persegi" class="" onclick="menampilkan_bangun_datar('persegi')">Persegi</button>
+        </nav>
     </header>
     <main>
-        <section>
+        <!-- Segitiga -->
+        <section id="segitiga">
             <div class="judul_section">
                 <h2>Segitiga</h2>
                 <div>
-                    <button id="button_luas_segitiga" class="active" onclick="hiddendisplay('luas')">Luas</button>
-                    <button id="button_keliling_segitiga" class="" onclick="hiddendisplay('keliling')">Keliling</button>
+                    <button id="button_luas_segitiga" class="active" onclick="tampil_rumus_segitiga('luas')">Luas</button>
+                    <button id="button_keliling_segitiga" class="" onclick="tampil_rumus_segitiga('keliling')">Keliling</button>
                 </div>
             </div>
             <div class="card_perhitungan" id="luas_segitiga">
@@ -56,9 +58,9 @@
                 <div class="card_form">
                     <h3>Masukkan Nilai</h3>
                     <div class="form">
-                        <input type="number" id="sisi_1" placeholder="Sisi 1" required>
-                        <input type="number" id="sisi_2" placeholder="Sisi 2" required>
-                        <input type="number" id="sisi_3" placeholder="Sisi 3" required>
+                        <input type="number" id="sisi_1" placeholder="Masukkan Sisi 1" required>
+                        <input type="number" id="sisi_2" placeholder="Masukkan Sisi 2" required>
+                        <input type="number" id="sisi_3" placeholder="Masukkan Sisi 3" required>
                         <button onclick=hitung_keliling_segitiga()>Hitung</button>
                         <button class="reset" onclick=reset_hasil_segitiga()>Reset</button>
                     </div>
@@ -74,6 +76,113 @@
             </div>
         </section>
 
+        <!-- Jajargenjang -->
+        <section id="jajargenjang" class="none">
+            <div class="judul_section">
+                <h2>Jajargenjang</h2>
+                <div>
+                    <button id="button_luas_jajargenjang" class="active" onclick="tampil_rumus_jajargenjang('luas')">Luas</button>
+                    <button id="button_keliling_jajargenjang" class="" onclick="tampil_rumus_jajargenjang('keliling')">Keliling</button>
+                </div>
+            </div>
+            <div class="card_perhitungan" id="luas_jajargenjang">
+                <div>
+                    <img src="assets/luasjajargenjang.jpg" alt="jajargenjang">
+                </div>
+                <div class="card_form">
+                    <h3>Masukkan Nilai</h3>
+                    <div class="form">
+                        <input type="number" id="alas_jajargenjang" placeholder="Masukkan Alas" required>
+                        <input type="number" id="tinggi_jajargenjang" placeholder="Masukkan Tinggi" required>
+                        <button onclick=hitung_luas_jajargenjang()>Hitung</button>
+                        <button class="reset" onclick=reset_hasil_jajargenjang()>Reset</button>
+                    </div>
+                </div>
+                <div class="card_hasil_hitung">
+                    <h3>Hasil Hitung</h3>
+                    <div>
+                        <div>Luas = Alas x Tinggi</div>
+                        <div>Luas = <span id="perhitungan_luas_jajargenjang"></span></div>
+                        <div>Luas = <span id="hasil_luas_jajargenjang"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card_perhitungan none" id="keliling_jajargenjang" >
+                <div>
+                    <img src="assets/kelilingjajargenjang.jpg" alt="jajargenjang">
+                </div>
+                <div class="card_form">
+                    <h3>Masukkan Nilai</h3>
+                    <div class="form">
+                        <input type="number" id="sisi_1_jajargenjang" placeholder="Masukkan Sisi 1" required>
+                        <input type="number" id="sisi_2_jajargenjang" placeholder="Masukkan Sisi 2" required>
+                        <button onclick=hitung_keliling_jajargenjang()>Hitung</button>
+                        <button class="reset" onclick=reset_hasil_jajargenjang()>Reset</button>
+                    </div>
+                </div>
+                <div class="card_hasil_hitung">
+                    <h3>Hasil Hitung</h3>
+                    <div>
+                        <div>Keliling = 2 x (Sisi + Sisi)</div>
+                        <div>Keliling = <span id="perhitungan_keliling_jajargenjang"></span></div>
+                        <div>Keliling = <span id="hasil_keliling_jajargenjang"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Persegi -->
+        <section id="persegi" class="none">
+            <div class="judul_section">
+                <h2>persegi</h2>
+                <div>
+                    <button id="button_luas_persegi" class="active" onclick="tampil_rumus_persegi('luas')">Luas</button>
+                    <button id="button_keliling_persegi" class="" onclick="tampil_rumus_persegi('keliling')">Keliling</button>
+                </div>
+            </div>
+            <div class="card_perhitungan" id="luas_persegi">
+                <div>
+                    <img src="assets/persegi.jpg" alt="persegi">
+                </div>
+                <div class="card_form">
+                    <h3>Masukkan Nilai</h3>
+                    <div class="form">
+                        <input type="number" id="sisi_persegi_luas" placeholder="Masukkan Sisi" required>
+                        <button onclick=hitung_luas_persegi()>Hitung</button>
+                        <button class="reset" onclick=reset_hasil_persegi()>Reset</button>
+                    </div>
+                </div>
+                <div class="card_hasil_hitung">
+                    <h3>Hasil Hitung</h3>
+                    <div>
+                        <div>Luas = Sisi x Sisi</div>
+                        <div>Luas = <span id="perhitungan_luas_persegi"></span></div>
+                        <div>Luas = <span id="hasil_luas_persegi"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card_perhitungan none" id="keliling_persegi" >
+                <div>
+                    <img src="assets/persegi.jpg" alt="persegi">
+                </div>
+                <div class="card_form">
+                    <h3>Masukkan Nilai</h3>
+                    <div class="form">
+                        <input type="number" id="sisi_persegi_keliling" placeholder="Masukkan Sisi" required>
+                        <button onclick=hitung_keliling_persegi()>Hitung</button>
+                        <button class="reset" onclick=reset_hasil_persegi()>Reset</button>
+                    </div>
+                </div>
+                <div class="card_hasil_hitung">
+                    <h3>Hasil Hitung</h3>
+                    <div>
+                        <div>Keliling = Sisi + Sisi + Sisi + Sisi</div>
+                        <div>Keliling = <span id="perhitungan_keliling_persegi"></span></div>
+                        <div>Keliling = <span id="hasil_keliling_persegi"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="js/script.js"></script>
 </body>

@@ -49,6 +49,10 @@ header nav button:hover{
     background-color: black;
     color: white;
 }
+header nav button.active{
+    background-color: black;
+    color: white;
+}
 main{
     width: 100%;
     display: flex;
@@ -59,6 +63,7 @@ main{
 main section{
     border: 1px solid black;
     width: 80%;
+    margin-bottom: 20px;
 }
 
 main section .judul_section{
