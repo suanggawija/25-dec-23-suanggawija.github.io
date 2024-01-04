@@ -101,6 +101,11 @@ const hitung_luas_segitiga = () => {
     document.getElementById('hasil_luas_segitiga').textContent = "";
     document.getElementById('perhitungan_keliling_segitiga').textContent = "";
     document.getElementById('hasil_keliling_segitiga').textContent = "";
+    document.getElementById('alas_segitiga').value = "";
+    document.getElementById('tinggi_segitiga').value = "";
+    document.getElementById('sisi_1').value = "";
+    document.getElementById('sisi_2').value = "";
+    document.getElementById('sisi_3').value = "";
  }
 
 
@@ -170,6 +175,10 @@ const hitung_keliling_jajargenjang = () => {
     document.getElementById('hasil_luas_jajargenjang').textContent = "";
     document.getElementById('perhitungan_keliling_jajargenjang').textContent = "";
     document.getElementById('hasil_keliling_jajargenjang').textContent = "";
+    document.getElementById('alas_jajargenjang').value = "";
+    document.getElementById('tinggi_jajargenjang').value = "";
+    document.getElementById('sisi_1_jajargenjang').value = "";
+    document.getElementById('sisi_2_jajargenjang').value = "";
  }
 
  // Jajargenjang =====================================================================
@@ -234,4 +243,6 @@ const hitung_keliling_persegi = () => {
     document.getElementById('hasil_luas_persegi').textContent = "";
     document.getElementById('perhitungan_keliling_persegi').textContent = "";
     document.getElementById('hasil_keliling_persegi').textContent = "";
+    document.getElementById('sisi_persegi_luas').value = "";
+    document.getElementById('sisi_persegi_keliling').value = "";
  }

@@ -17,14 +17,19 @@ h1, h2, h3{
     text-align: center;
 }
 
-h1, h3{
+h1{
     margin-bottom: 12px;
+    color: rgb(104, 0, 223);
 }
 
 h2{
     margin-top: 12px;
+    color: rgb(104, 0, 223);
 }
 
+h3{
+    margin-bottom: 12px;
+}
 
 header p{
     max-width: 700px;
@@ -37,20 +42,20 @@ header nav {
 }
 header nav button{
     background-color: transparent;
-    color: black;
+    color: rgb(104, 0, 223);
     font-size: 18px;
     padding: 12px;
     width: 200px;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid rgb(104, 0, 223);
     transition: 0.2s ease;
 }
 header nav button:hover{
-    background-color: black;
+    background-color: rgb(104, 0, 223);
     color: white;
 }
 header nav button.active{
-    background-color: black;
+    background-color: rgb(104, 0, 223);
     color: white;
 }
 main{
@@ -61,7 +66,7 @@ main{
 }
 
 main section{
-    border: 1px solid black;
+    border: 1px solid rgb(215, 181, 255);
     width: 80%;
     margin-bottom: 20px;
 }
@@ -71,7 +76,7 @@ main section .judul_section{
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #F4F4F4;
+    background-color: rgb(246, 238, 255);
 }
 
 main section .judul_section div{
@@ -80,39 +85,39 @@ main section .judul_section div{
 
 main section .judul_section div button{
     background-color: transparent;
-    color: black;
+    color: rgb(104, 0, 223);
     font-size: 14px;
     padding: 8px;
     width: 120px;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid rgb(104, 0, 223);
     font-weight: 600;
 }
 
 main section .judul_section div button.active{
-    background: black;
+    background: rgb(104, 0, 223);
     color: white;
 }
 
 main section .judul_section div button:hover{
-    background-color: black;
+    background-color: rgb(104, 0, 223);
     color: white;
 }
 .card_perhitungan{
     padding: 24px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 350px 350px 350px;
     align-items: center;
 }
 
 img{
-    max-width: 400px;
+    max-width: 300px;
     padding: 12px;
 }
 
 .card_perhitungan .card_form{
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 1px solid rgb(104, 0, 223);
+    border-right: 1px solid rgb(104, 0, 223);
     height: 100%;
     padding: 12px;
     text-align: center;
@@ -134,12 +139,14 @@ img{
 .form button{
     margin-top: 12px;
     padding: 8px;
-    background-color: black;
+    background-color: rgb(104, 0, 223);
+    border: none;
     color: white;
 }
 .form .reset{
     margin-top: 0px;
-    background-color: gray;
+    background-color: rgb(246, 238, 255);
+    color: rgb(104, 0, 223);
     border: none;
 }
 .none{
